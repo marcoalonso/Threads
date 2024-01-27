@@ -24,6 +24,7 @@ struct LoginView: View {
                 
                 VStack(spacing: 12.0) {
                     TextField("Enter your email", text: $viewModel.email)
+                        .autocapitalization(.none)
                         .modifier(TextFieldModifiers())
                         
                     SecureField("Enter your password", text: $viewModel.password)
