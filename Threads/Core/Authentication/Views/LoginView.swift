@@ -49,7 +49,9 @@ struct LoginView: View {
                 }
                 
                 Button(action: {
-                    Task { try await viewModel.login() }
+                    if !viewModel.email.isEmpty && viewModel.password.count >= 6 {
+                        Task { try await viewModel.login() }
+                    }
                 }, label: {
                     Text("Login")
                         .font(.subheadline)
@@ -58,7 +60,9 @@ struct LoginView: View {
                         .frame(width: 352, height: 44)
                         .background(.black)
                         .cornerRadius(8)
+                        .opacity((viewModel.email.isEmpty || viewModel.password.count < 6 ) ? 0.5 : 1)
                 })
+                .disabled(viewModel.email.isEmpty || viewModel.password.isEmpty)
                 
                 Spacer()
                 
@@ -78,6 +82,9 @@ struct LoginView: View {
                     .font(.footnote)
                 }
                 .padding(.vertical, 16)
+            }
+            .alert(item: $viewModel.alertItem) { alertItem in
+                Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
             }
         }
     }

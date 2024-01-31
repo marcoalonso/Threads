@@ -19,6 +19,8 @@
 		6C507D0A2B69C29300DBAB32 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C507D092B69C29200DBAB32 /* CurrentUserProfileView.swift */; };
 		6C507D0E2B69C5D300DBAB32 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C507D0D2B69C5D300DBAB32 /* ProfileHeaderView.swift */; };
 		6C507D102B69C81700DBAB32 /* UserContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C507D0F2B69C81700DBAB32 /* UserContentListView.swift */; };
+		6C507D132B69E02100DBAB32 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C507D122B69E02100DBAB32 /* EditProfileViewModel.swift */; };
+		6C507D152B69E3CD00DBAB32 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C507D142B69E3CD00DBAB32 /* ImageUploader.swift */; };
 		6C80E0A42B655C3200E4DC7E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C80E0A32B655C3200E4DC7E /* UserService.swift */; };
 		6C80E0A72B655D5800E4DC7E /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C80E0A62B655D5800E4DC7E /* CurrentUserProfileViewModel.swift */; };
 		6C8351432B52EFF20008EED9 /* ThreadsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8351422B52EFF20008EED9 /* ThreadsTabView.swift */; };
@@ -65,6 +67,7 @@
 		6CBDD47E2B58427F002AAE0F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBDD47D2B58427F002AAE0F /* AuthService.swift */; };
 		6CC7E8742B447D6E00027E2F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7E8732B447D6E00027E2F /* RegistrationView.swift */; };
 		6CC7E8772B447F1B00027E2F /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7E8762B447F1B00027E2F /* TextFieldModifiers.swift */; };
+		6CE394062B69E94C00324366 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE394052B69E94C00324366 /* AlertItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,8 @@
 		6C507D092B69C29200DBAB32 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		6C507D0D2B69C5D300DBAB32 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		6C507D0F2B69C81700DBAB32 /* UserContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListView.swift; sourceTree = "<group>"; };
+		6C507D122B69E02100DBAB32 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		6C507D142B69E3CD00DBAB32 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		6C80E0A32B655C3200E4DC7E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		6C80E0A62B655D5800E4DC7E /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
 		6C8351422B52EFF20008EED9 /* ThreadsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTabView.swift; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		6CBDD47D2B58427F002AAE0F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6CC7E8732B447D6E00027E2F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		6CC7E8762B447F1B00027E2F /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
+		6CE394052B69E94C00324366 /* AlertItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 		6C1002162A8BEA060049C9A9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6CE394052B69E94C00324366 /* AlertItem.swift */,
 				6CC7E8752B447F0800027E2F /* ViewModifiers */,
 			);
 			path = Utils;
@@ -192,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				6C80E0A32B655C3200E4DC7E /* UserService.swift */,
+				6C507D142B69E3CD00DBAB32 /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -314,6 +322,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		6C507D112B69E01400DBAB32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C507D122B69E02100DBAB32 /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6C80E0A52B655D4600E4DC7E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +445,7 @@
 		6CBDD4312B55C342002AAE0F /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				6C507D112B69E01400DBAB32 /* ViewModel */,
 				6CBDD4322B55C3C7002AAE0F /* Views */,
 			);
 			path = EditProfile;
@@ -575,6 +592,8 @@
 				6CBDD47C2B58418E002AAE0F /* RegistrationViewModel.swift in Sources */,
 				6C1002242A8BEAD30049C9A9 /* LoginView.swift in Sources */,
 				6CBDD47E2B58427F002AAE0F /* AuthService.swift in Sources */,
+				6CE394062B69E94C00324366 /* AlertItem.swift in Sources */,
+				6C507D132B69E02100DBAB32 /* EditProfileViewModel.swift in Sources */,
 				6CBDD4342B55C3DB002AAE0F /* EditProfileView.swift in Sources */,
 				6C10020B2A8BE9A80049C9A9 /* ContentView.swift in Sources */,
 				6C80E0A42B655C3200E4DC7E /* UserService.swift in Sources */,
@@ -586,6 +605,7 @@
 				6C83515D2B545CA80008EED9 /* UserCell.swift in Sources */,
 				6C507D042B69BAAC00DBAB32 /* ExploreViewModel.swift in Sources */,
 				6C83514D2B52FD3D0008EED9 /* CreateThreadView.swift in Sources */,
+				6C507D152B69E3CD00DBAB32 /* ImageUploader.swift in Sources */,
 				6C8351602B545FB60008EED9 /* ProfileThreadFilter.swift in Sources */,
 				6C1EAA3F2B58A897004ACAF0 /* ContentViewModel.swift in Sources */,
 				6C80E0A72B655D5800E4DC7E /* CurrentUserProfileViewModel.swift in Sources */,
