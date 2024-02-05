@@ -14,6 +14,7 @@ struct EditProfileView: View {
     @State private var isPrivateProfile = false
     @Environment(\.dismiss) private var dismiss
     @StateObject var viewModel = EditProfileViewModel()
+    let user: User
     
     var body: some View {
         NavigationStack {
@@ -28,7 +29,7 @@ struct EditProfileView: View {
                             Text("Name")
                                 .fontWeight(.semibold)
                             
-                            Text("Marco Alonso")
+                            Text(user.fullname)
                         }
                         
                         Spacer()
@@ -41,7 +42,7 @@ struct EditProfileView: View {
                                     .frame(width: 40, height: 40)
                                     .clipShape(Circle())
                             } else {
-                                CircularProfileImageView(image: Image("alonso"))
+                                CircularProfileImageView(user: user, size: .small)
                             }
                         }
                     }
@@ -118,5 +119,5 @@ struct EditProfileView: View {
 }
 
 #Preview {
-    EditProfileView()
+    EditProfileView(user: MockUser.user)
 }

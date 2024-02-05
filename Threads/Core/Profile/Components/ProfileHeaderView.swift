@@ -28,7 +28,7 @@ struct ProfileHeaderView: View {
                 }
                 
                 if let bio = user?.bio {
-                    Text("iOS Developer and Teacher")
+                    Text(bio)
                         .font(.footnote)
                 }
                 
@@ -39,7 +39,7 @@ struct ProfileHeaderView: View {
             
             Spacer()
             
-            CircularProfileImageView(image: Image("marco"))
+            CircularProfileImageView(user: user, size: .medium)
         }
     }
 }
