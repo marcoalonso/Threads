@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct ThreadCell: View {
+    let thread: Thread
+    
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12.0) {
-                CircularProfileImageView(user: nil, size: .small)
+                CircularProfileImageView(user: thread.user, size: .small)
                 
                 VStack(alignment: .leading, spacing: 4.0) {
                     HStack {
-                        Text("marco_alonso_r26")
+                        Text(thread.user?.username ?? "")
                             .font(.footnote)
                             .fontWeight(.semibold)
                         
                         Spacer()
                         
-                        Text("10m")
+                        Text("\(timeDifferenceString(from: thread.timeStamp.dateValue()))")
                             .font(.caption)
                             .foregroundStyle(Color(.systemGray3))
                         
@@ -34,7 +36,7 @@ struct ThreadCell: View {
                         
                     }
                     
-                    Text("iOS Developer I love the technology")
+                    Text(thread.caption)
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
@@ -42,7 +44,20 @@ struct ThreadCell: View {
                         Button(action: {
                             
                         }, label: {
-                            Image(systemName: "heart")
+                            ZStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.red) // Color de la imagen, puedes ajustarlo según tus necesidades
+                                Text("\(thread.likes)")
+                                    .font(.caption)
+                                    .foregroundColor(.white)
+                                    .padding(4)
+                                    .background(Color.red) // Color del fondo del número, puedes ajustarlo según tus necesidades
+                                    .clipShape(Circle())
+                                    .offset(x: 10, y: -10) // Ajusta la posición del número según sea necesario
+                            }
                         })
                         
                         Button(action: {
@@ -72,8 +87,24 @@ struct ThreadCell: View {
         }
         .padding()
     }
+    
+    func timeDifferenceString(from date: Date) -> String {
+           let currentDate = Date()
+           let calendar = Calendar.current
+           let components = calendar.dateComponents([.minute, .hour, .day], from: date, to: currentDate)
+           
+           if let day = components.day, day > 0 {
+               return "\(day) día(s) atrás"
+           } else if let hour = components.hour, hour > 0 {
+               return "\(hour) hora(s) atrás"
+           } else if let minute = components.minute, minute > 0 {
+               return "\(minute) minuto(s) atrás"
+           } else {
+               return "Hace un momento"
+           }
+       }
 }
 
 #Preview {
-    ThreadCell()
+    ThreadCell(thread: MockData.thread)
 }

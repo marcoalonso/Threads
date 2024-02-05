@@ -119,5 +119,5 @@ struct EditProfileView: View {
 }
 
 #Preview {
-    EditProfileView(user: MockUser.user)
+    EditProfileView(user: MockData.user)
 }

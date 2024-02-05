@@ -11,7 +11,6 @@ import FirebaseFirestoreSwift
 
 struct Thread: Identifiable, Codable {
     @DocumentID var threadId: String?
-    
     let ownerUid: String
     let caption: String
     let timeStamp: Timestamp

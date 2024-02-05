@@ -38,5 +38,5 @@ struct UserCell: View {
 }
 
 #Preview {
-    UserCell(user: MockUser.user)
+    UserCell(user: MockData.user)
 }
