@@ -73,6 +73,7 @@
 		6CF0FEC12B7142D90089D6BC /* CreateThreadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0FEC02B7142D90089D6BC /* CreateThreadViewModel.swift */; };
 		6CF0FEC32B7142F00089D6BC /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0FEC22B7142F00089D6BC /* ThreadService.swift */; };
 		6CF0FEC62B714FB60089D6BC /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0FEC52B714FB60089D6BC /* FeedViewModel.swift */; };
+		6CF0FECA2B715C490089D6BC /* UserContentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0FEC92B715C490089D6BC /* UserContentListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		6CF0FEC02B7142D90089D6BC /* CreateThreadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadViewModel.swift; sourceTree = "<group>"; };
 		6CF0FEC22B7142F00089D6BC /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
 		6CF0FEC52B714FB60089D6BC /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		6CF0FEC92B715C490089D6BC /* UserContentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,8 +330,8 @@
 		6C507D0C2B69C5BF00DBAB32 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6C507D0D2B69C5D300DBAB32 /* ProfileHeaderView.swift */,
-				6C507D0F2B69C81700DBAB32 /* UserContentListView.swift */,
+				6CF0FEC82B715C370089D6BC /* ViewModel */,
+				6CF0FEC72B715C2C0089D6BC /* View */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -514,6 +516,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6CF0FEC72B715C2C0089D6BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C507D0D2B69C5D300DBAB32 /* ProfileHeaderView.swift */,
+				6C507D0F2B69C81700DBAB32 /* UserContentListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CF0FEC82B715C370089D6BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6CF0FEC92B715C490089D6BC /* UserContentListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -654,6 +673,7 @@
 				6CC7E8742B447D6E00027E2F /* RegistrationView.swift in Sources */,
 				6C90EEE12B60390D00CC990C /* User.swift in Sources */,
 				6CF0FEBE2B7142120089D6BC /* Thread.swift in Sources */,
+				6CF0FECA2B715C490089D6BC /* UserContentListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

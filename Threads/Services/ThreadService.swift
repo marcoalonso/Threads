@@ -17,7 +17,25 @@ struct ThreadService {
     }
     
     static func fetchThreads() async throws -> [Thread] {
-        let snapshot = try await Firestore.firestore().collection("threads").order(by: "timeStamp", descending: true).getDocuments()
+        let snapshot = try await Firestore
+            .firestore()
+            .collection("threads")
+            .order(by: "timeStamp", descending: true)
+            .getDocuments()
+        
         return snapshot.documents.compactMap({ try? $0.data(as: Thread.self) })
+    }
+    
+    /// Recuperar solo los threads del usuario que podrá ver en su perfil
+    static func fertchUserThreads(uid: String) async throws -> [Thread] {
+        let snapshot = try await Firestore
+            .firestore()
+            .collection("threads")
+            .whereField("ownerUid", isEqualTo: uid)
+            .getDocuments()
+        let threads = snapshot.documents.compactMap({ try? $0.data(as: Thread.self) })
+        print("Debug: threads: \(threads)")
+
+        return threads.sorted(by: { $0.timeStamp.dateValue() > $1.timeStamp.dateValue() })
     }
 }

@@ -42,6 +42,7 @@ struct ThreadCell: View {
                     
                     HStack(spacing: 16.0) {
                         Button(action: {
+                            print("Debug: thread \(thread.likes )")
                             
                         }, label: {
                             ZStack {
@@ -94,11 +95,23 @@ struct ThreadCell: View {
            let components = calendar.dateComponents([.minute, .hour, .day], from: date, to: currentDate)
            
            if let day = components.day, day > 0 {
-               return "\(day) día(s) atrás"
+               if day > 1 {
+                   return "\(day) días atrás"
+               } else {
+                   return "\(day) día atrás"
+               }
            } else if let hour = components.hour, hour > 0 {
-               return "\(hour) hora(s) atrás"
+               if hour > 1 {
+                   return "hace \(hour) horas"
+               } else {
+                   return "hace \(hour) hora"
+               }
            } else if let minute = components.minute, minute > 0 {
-               return "\(minute) minuto(s) atrás"
+               if minute > 1 {
+                   return "hace \(minute) minutos"
+               } else {
+                   return "hace \(minute) minuto"
+               }
            } else {
                return "Hace un momento"
            }

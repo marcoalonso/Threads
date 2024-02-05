@@ -20,5 +20,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2370303-8DA3-4B26-8533-92A0493305E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Threads/Services/ThreadService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "fertchUserThreads(uid:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2370303-8DA3-4B26-8533-92A0493305E1 - 52d634e75c79d32f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Threads.ThreadService.fertchUserThreads(uid: Swift.String) async throws -&gt; Swift.Array&lt;Threads.Thread&gt;"
+                  moduleName = "Threads"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcoalonso/Desktop/SWIFT%20PROYECTS/SWIFTUI/Threads/Threads/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "704">
+               </Location>
+               <Location
+                  uuid = "F2370303-8DA3-4B26-8533-92A0493305E1 - e08811e720511ed8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Threads.Thread, Threads.Thread) -&gt; Swift.Bool in static Threads.ThreadService.fertchUserThreads(uid: Swift.String) async throws -&gt; Swift.Array&lt;Threads.Thread&gt;"
+                  moduleName = "Threads"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcoalonso/Desktop/SWIFT%20PROYECTS/SWIFTUI/Threads/Threads/Services/ThreadService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
